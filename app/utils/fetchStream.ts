@@ -32,7 +32,7 @@ export const fetchStream = (
 	const fetchSSE = async () => {
 		const reqBody = { p: input };
 		try {
-			const response = await fetch("http://192.168.1.8:3002/queue", {
+			const response = await fetch("https://aichat-server.pouyaprogramming.ir/queue", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(reqBody),
