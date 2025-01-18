@@ -1,12 +1,8 @@
-# pouya`s AI Chatbot Frontend
+# pouya`s AI Chatbot
 
 ### Short Description
 
 This is a user interface for interacting with an AI model, built using Next.js and Tailwind CSS.
-
-Backend Code: [aichat-server](https://github.com/facepalm0075/aichat-server)
-
-Live Test: [aichat.pouya](https://aichat.pouyaprogramming.ir/)
 
 ---
 
@@ -39,6 +35,17 @@ Live Test: [aichat.pouya](https://aichat.pouyaprogramming.ir/)
    ```
 
 3. The build output will include static files (HTML, CSS, JavaScript) ready for deployment.
+
+### How It Works
+
+When a prompt is submitted, it is sent to the server via a POST request. To read the streamed response:
+
+- A `reader` object is created for response to handle the stream.
+- Since the data is streamed as binary, a `TextDecoder` (UTF-8) object is also created to decode binary data into text.
+- Inside a `while` loop, the `read()` function of the `reader` is called to fetch chunks of data.
+- Each chunk is decoded using the `TextDecoder` and then parsed as JSON.
+- The parsed data is passed to a component responsible for rendering the text.
+- If the user presses the stop button during the stream, the `reader` object is closed, and the browser automatically terminates the connection.
 
 ---
 
