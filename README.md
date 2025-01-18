@@ -4,7 +4,7 @@
 
 This is a user interface for interacting with an AI model, built using Next.js and Tailwind CSS.
 
-Frontend Code: [aichat-platform](https://github.com/facepalm0075/aichat-platform)
+Backend Code: [aichat-server](https://github.com/facepalm0075/aichat-server)
 
 Live Test: [aichat.pouya](https://aichat.pouyaprogramming.ir/)
 
